@@ -1,0 +1,40 @@
+ext {
+
+    android = [
+            compileSdkVersion : 25,
+            buildToolsVersion : '25.0.2',
+            applicationId     : "com.devliu.learning",
+            minSdkVersion     : 19,
+            targetSdkVersion  : 25,
+            versionCode       : 1,
+            versionName       : "1.0"
+    ]
+
+    def dependVersion = [
+            support     : "25.3.1",
+            retrofit    : "2.2.0",
+            dagger2     : "2.10",
+            butterknife : "8.6.0"
+    ]
+
+    dependencies = [
+            //base
+            "appcompat-v7"              : "com.android.support:appcompat-v7:${dependVersion.support}",
+
+            //rx
+            "rxjava"                    : "io.reactivex.rxjava2:rxjava:2.0.8",
+            "rxandroid"                 : "io.reactivex.rxjava2:rxandroid:2.0.1",
+
+            //network
+            "retrofit"                  : "com.squareup.retrofit2:retrofit:${dependVersion.retrofit}",
+            "retrofit-converter-gson"   : "com.squareup.retrofit2:converter-gson:${dependVersion.retrofit}",
+            "retrofit-adapter-rxjava2"  : "com.squareup.retrofit2:adapter-rxjava2:${dependVersion.retrofit}",
+            "okhttp-logging-interceptor": "com.squareup.okhttp3:logging-interceptor:3.8.0",
+
+            //di
+            "dagger"                    : "com.google.dagger:dagger:${dependVersion.dagger2}",
+            "dagger-compiler"           : "com.google.dagger:dagger-compiler:${dependVersion.dagger2}",
+            "butterknife"               : "com.jakewharton:butterknife:${dependVersion.butterknife}",
+            "butterknife-compiler"      : "com.jakewharton:butterknife-compiler:${dependVersion.butterknife}"
+    ]
+}
